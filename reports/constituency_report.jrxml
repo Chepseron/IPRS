@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="constituency_report" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     ADDRESS."RID" AS ADDRESS_RID,
+     ADDRESS."CONSTIT" AS ADDRESS_CONSTIT,
+     HUMAN."RID" AS HUMAN_RID,
+     HUMAN."PID" AS HUMAN_PID,
+     HUMAN."PIN" AS HUMAN_PIN,
+     HUMAN."NAME" AS HUMAN_NAME,
+     HUMAN."SURN" AS HUMAN_SURN,
+     HUMAN."LAST_NAME" AS HUMAN_LAST_NAME,
+     HUMAN."SEX" AS HUMAN_SEX,
+     HUMAN."DATE_BIRTH" AS HUMAN_DATE_BIRTH,
+     HUMAN."DATE_DEATH" AS HUMAN_DATE_DEATH,
+     HUMAN."O_PID" AS HUMAN_O_PID
+FROM
+     "IPRS"."ADDRESS" ADDRESS,
+     "IPRS"."HUMAN" HUMAN]]>
+	</queryString>
+	<field name="ADDRESS_RID" class="java.math.BigDecimal"/>
+	<field name="ADDRESS_CONSTIT" class="java.lang.String"/>
+	<field name="HUMAN_RID" class="java.math.BigDecimal"/>
+	<field name="HUMAN_PID" class="java.math.BigDecimal"/>
+	<field name="HUMAN_PIN" class="java.lang.String"/>
+	<field name="HUMAN_NAME" class="java.lang.String"/>
+	<field name="HUMAN_SURN" class="java.lang.String"/>
+	<field name="HUMAN_LAST_NAME" class="java.lang.String"/>
+	<field name="HUMAN_SEX" class="java.lang.String"/>
+	<field name="HUMAN_DATE_BIRTH" class="java.sql.Timestamp"/>
+	<field name="HUMAN_DATE_DEATH" class="java.sql.Timestamp"/>
+	<field name="HUMAN_O_PID" class="java.math.BigDecimal"/>
+	<group name="ADDRESS_CONSTIT">
+		<groupExpression><![CDATA[$F{ADDRESS_CONSTIT}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>server</param-value>
+    </context-param>
+    <!-- rich begin -->
+    <context-param>
+        <param-name>org.richfaces.SKIN</param-name>
+        <param-value>blueSky</param-value>
+        <!--param-value>deepMarine</param-value-->
+        <!--param-value>DEFAULT</param-value-->
+        <!--param-value>emeraldTown</param-value-->
+        <!--param-value>wine</param-value-->
+        <!--param-value>wine</param-value-->
+        <!--param-value>ruby</param-value-->
+        <!--param-value>classic</param-value-->
+    </context-param>
+    <!-- Making the RichFaces skin spread to standard HTML controls -->
+    <context-param>
+        <param-name>org.richfaces.CONTROL_SKINNING</param-name>
+        <param-value>enable</param-value>
+    </context-param>
+    <!-- Defining and mapping the RichFaces filter -->
+    <filter>
+        <display-name>RichFaces Filter</display-name>
+        <filter-name>richfaces</filter-name>
+        <filter-class>org.ajax4jsf.Filter</filter-class>
+        <init-param>
+            <param-name>createTempFiles</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>richfaces</filter-name>
+        <servlet-name>Faces Servlet</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
+    <!-- end rich -->
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>month_report</servlet-name>
+        <servlet-class>reports.month_report</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>user_query_report</servlet-name>
+        <servlet-class>reports.user_query_report</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/w/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>month_report</servlet-name>
+        <url-pattern>/month_report</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>user_query_report</servlet-name>
+        <url-pattern>/user_query_report</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>w/greetings_welcome.jsp</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.html</location>
+    </error-page>
+    <error-page>
+        <error-code>505</error-code>
+        <location>/error.html</location>
+    </error-page>
+    <error-page>
+        <error-code>400</error-code>
+        <location>/error.html</location>
+    </error-page>
+</web-app>

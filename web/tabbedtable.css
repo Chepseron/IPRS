@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+	
+    .tabbed_box {
+      margin: 0px auto 0px auto;  
+      width:630px;
+     
+   }  
+     .tabbed_box h4 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:23px;
+	color:#00143f;
+	letter-spacing:-1px;
+	margin-bottom:10px;
+    }  
+    .tabbed_box h4 small {  
+        color:#e3e9ec;  
+       	font-weight:normal;  
+     	font-size:9px;  
+       	font-family:Verdana, Arial, Helvetica, sans-serif;  
+      	text-transform:uppercase;  
+      	position:relative;  
+     	top:-4px;  
+       	left:6px;  
+      	letter-spacing:0px;  
+   }  
+     .tabbed_area {
+	/*backgrnd*/
+	border:1px solid #ffffff;
+	background-color:#ffffff;
+	padding:5px;
+  }  
+      ul.tabs {  
+       margin:0px; padding:0px;  
+   }  
+    ul.tabs li {  
+        list-style:none;  
+       display:inline;  
+  }  
+     ul.tabs li a {
+	 /*normal*/
+	background-color:#00143f;
+	color:#FFFFFF;
+	padding:8px 14px 8px 14px;
+	text-decoration:none;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-transform:uppercase;
+	border:1px solid #00143f;
+   }  
+   ul.tabs li a:hover {
+	background-color:#001e5e;
+	border-color:#00143f;
+	/*Roll over*/
+   }  
+   ul.tabs li a.active {
+	background-color:#f0f5fd;
+	color:#001e5e;
+	border:1px solid #efefef;
+	border-bottom: 1px solid #f0f5fd;
+   }  
+    .content {
+	background-color:#f0f5fd;
+	padding:1px;
+	border:1px solid #efefef;
+ }  
+ #content_2, #content_3, #content_4, #content_5 { display:none; } 
+ 
+   ul.tabs {  
+       margin:0px; padding:0px;  
+       margin-top:5px;  
+       margin-bottom:6px;  
+    }  
+	   .content ul {  
+        margin:0px;  
+        padding:0px 20px 0px 20px;  
+    }  
+    .content ul li {  
+        list-style:none;  
+        border-bottom:1px solid #d6dde0;    
+        font-size:13px;  
+   }  
+   .content ul li a {
+	text-decoration:none;
+	color:#FFFFFF;
+   }  
+   .content ul li a small {
+	color:#00143f; /*Active txt*/
+	font-size:9px;
+	text-transform:uppercase;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	position:relative;
+	left:4px;
+	top:0px;
+   }  
+      .content ul li:last-child {  
+        border-bottom:none;  
+    }  
+	.goaldiff{
+	width: 50px;
+	float: right;
+	}
+	
+/**/
+.tabcontainer{
+	margin: 10px;
+	height: 320px;
+}
+.side1{
+	width: 250px;
+	height: 210px;
+	border-right: 1px #CCCCCC dashed;
+	float: left;
+	padding: 5px;
+}
+.side2{
+	width: 240px;
+	float: right;
+	padding-top: 45px;
+}
+.tabularlink{
+	padding: 3px;
+}

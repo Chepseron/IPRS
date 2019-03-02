@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	padding: 0;
+	text-align:center;
+	margin: 0;
+	font-family:Arial, Helvetica, sans-serif;
+        background-repeat: no-repeat;
+        background: #e2edfc;
+	background: -moz-linear-gradient(top, #e2edfc, #fff);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e2edfc), to(#fff));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2edfc', endColorstr='#ffffff');
+}
+
+#login_container{
+	background-image: url(images/IPRS_layout.png);
+        background-repeat: no-repeat;
+	height: 900px;
+	width: 1030px;
+	margin-left: auto;
+	margin-right:auto;
+
+                
+}
+#login_content{
+    width: 300px;
+    height: 200px;
+    margin-left: auto;
+    margin-right:auto;
+    padding-top: 320px;
+    text-align: left;
+    border: 1px #FFFFFF;
+    
+}
+#footer{
+    font-size: 10px;
+    color: #fff;
+}
+#login_page{
+    border: 1px #001d5c solid;
+    padding: 10px;
+    width: 250px;
+    background-color: #00143f;
+}
+#chnage_container{
+    border: 1px #001d5c solid;
+    padding: 10px;
+    width: 250px;
+    background-color: #00143f;
+}
+.enter_button{
+    padding-top: 10px;
+}
+.text_lines{
+    padding-top: 10px;
+}
+.headline{
+    color: #fff;
+    font-size: 17px;
+    border-bottom: 1px #001d5c solid;
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+}

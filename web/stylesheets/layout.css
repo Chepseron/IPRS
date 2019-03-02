@@ -1,0 +1,178 @@
+body{
+    padding: 0;
+    text-align:center;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: url("../images/strip.png");
+	background-repeat: repeat-x;
+}
+
+#main_container{
+    width: 1000px;
+    background-color:#FFF;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 40px;
+    text-align: left;
+    height: 500px;
+}
+#footer{
+    width: 980px;
+    background-color:#FFF;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: left;
+    height: 100%;
+	font-size:10px;
+	padding: 10px;
+}
+#login_container{
+	width: 1000px;
+	float:left;
+}
+#search{
+	width: 400px;
+	float: right;
+	margin-top: 25px;
+}
+.search_label{
+	font-weight: bold;
+	font-size:12px;
+	color: #333;
+}
+#result_container{
+	margin-top: 10px;
+	border: #efefef solid 5px;
+	height: 1000px;
+}
+
+.login_content{
+	height: 170px;
+	width: 300px;
+	border: #efefef solid 5px;
+	margin-left: auto;
+    margin-right:auto;
+	margin-top: 40px;
+}
+#pages_container{
+	width: 1000px;
+    background-color:#FFF;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 40px;
+    text-align: left;
+    height: 500px;
+}
+.logos{
+	height:74px;
+	width: 287px;
+	float:left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.navibar{
+	margin-right: 10px;
+	width: 300px;
+	height: 29px;
+	float:right;
+	background-repeat: no-repeat;
+	background-color: #3e3e3e;
+	padding-left: 10px;
+	
+	-moz-border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
+	behavior: url(border-radius.htc);
+
+}
+.contents_container{
+	float:left;
+	width: 980px;
+	margin: 10px;
+	border-top: solid 5px #3b3b3b;
+}
+.container_label{
+	margin: 10px;
+	font-size:16px;
+	font-weight:bold;
+	padding-bottom: 10px;
+	color:#333;
+}
+.left_container{
+	width: 300px;
+	float:left;
+	background-color:#efefef;
+}
+.right_container{
+	width: 650px;
+	float: right;
+	border: #efefef solid 5px;
+	margin-top: 5px;
+}
+.admin_container_rows{
+	height: 65px;
+	margin: 10px;
+	border-bottom: #dedede dashed 1px;
+}
+.icons_container{
+	width: 60px;
+	float:left;
+	margin-right: 10px;
+	
+}
+.icons_text{
+	font-size:11px;
+	margin-left: auto;
+	margin-right:auto;
+	text-align: center;
+}
+.icons{
+	width: 32px;
+	height: 32px;
+	margin-left: auto;
+    margin-right:auto;
+}
+.logout{
+	margin-top: 100px;
+	margin-left: auto;
+    margin-right:auto;
+	border: #efefef solid 5px;
+	width: 700px;
+}
+.text{
+	margin: 5px;
+	font-size:12px;
+}
+
+#side_nav{
+	width: 300px;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: left;
+    height: 300px;
+}
+.main_nav{
+	margin: 10px 10px 10px 10px;
+	width: 280px;
+	height: 32px;
+}
+.sub_nav{
+	margin: 10px 10px 10px 30px;
+	height: 32px;
+
+}
+.sub_navtxt{
+	font-size: small;
+	float: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	font-weight:bold;
+	color: #333;
+	
+}
+.sub_navico{
+	width: 32px;
+	height: 32px;
+	float: left;
+
+}

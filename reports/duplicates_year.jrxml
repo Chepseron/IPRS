@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="duplicates_reports" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Enter Year of Birth" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     DOUBLES."RID" AS DOUBLES_RID,
+     DOUBLES."RID_D" AS DOUBLES_RID_D,
+     DOUBLES."O_PID" AS DOUBLES_O_PID,
+     DOUBLES."N_DOC" AS DOUBLES_N_DOC,
+     DOUBLES."DATE_MADE" AS DOUBLES_DATE_MADE,
+     DOUBLES."YEAR_B" AS DOUBLES_YEAR_B,
+     DOUBLES."MONTH_B" AS DOUBLES_MONTH_B,
+     DOUBLES."DAY_B" AS DOUBLES_DAY_B,
+     DOUBLES."SEX" AS DOUBLES_SEX,
+     DOUBLES."SURN" AS DOUBLES_SURN,
+     DOUBLES."NAME" AS DOUBLES_NAME,
+     DOUBLES."LAST_NAME" AS DOUBLES_LAST_NAME,
+     DOUBLES."XML_NAME" AS DOUBLES_XML_NAME,
+     DOUBLES."DATE_INCOME" AS DOUBLES_DATE_INCOME,
+     DOUBLES."STATUS" AS DOUBLES_STATUS,
+     DOUBLES."DATE_MODS" AS DOUBLES_DATE_MODS,
+     DOUBLES."CREATED_BY" AS DOUBLES_CREATED_BY,
+     DOUBLES."XML_DATA" AS DOUBLES_XML_DATA,
+     DOUBLES."FINGER_01" AS DOUBLES_FINGER_01,
+     DOUBLES."FINGER_02" AS DOUBLES_FINGER_02,
+     DOUBLES."FINGER_03" AS DOUBLES_FINGER_03,
+     DOUBLES."FINGER_04" AS DOUBLES_FINGER_04,
+     DOUBLES."FINGER_05" AS DOUBLES_FINGER_05,
+     DOUBLES."FINGER_06" AS DOUBLES_FINGER_06,
+     DOUBLES."FINGER_07" AS DOUBLES_FINGER_07,
+     DOUBLES."FINGER_08" AS DOUBLES_FINGER_08,
+     DOUBLES."FINGER_09" AS DOUBLES_FINGER_09,
+     DOUBLES."FINGER_10" AS DOUBLES_FINGER_10,
+     DOUBLES."FINGER_MAIN" AS DOUBLES_FINGER_MAIN,
+     DOUBLES."PHOTO" AS DOUBLES_PHOTO,
+     DOUBLES."SIGNATURE" AS DOUBLES_SIGNATURE,
+     DOUBLES."CITIZ" AS DOUBLES_CITIZ
+FROM
+     "IPRS"."DOUBLES" DOUBLES
+WHERE
+
+DOUBLES."YEAR_B"= $P{Enter Year of Birth}]]>
+	</queryString>
+	<field name="DOUBLES_RID" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_RID_D" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_O_PID" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_N_DOC" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_DATE_MADE" class="java.sql.Timestamp"/>
+	<field name="DOUBLES_YEAR_B" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_MONTH_B" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_DAY_B" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_SEX" class="java.lang.String"/>
+	<field name="DOUBLES_SURN" class="java.lang.String"/>
+	<field name="DOUBLES_NAME" class="java.lang.String"/>
+	<field name="DOUBLES_LAST_NAME" class="java.lang.String"/>
+	<field name="DOUBLES_XML_NAME" class="java.lang.String"/>
+	<field name="DOUBLES_DATE_INCOME" class="java.sql.Timestamp"/>
+	<field name="DOUBLES_STATUS" class="java.lang.String"/>
+	<field name="DOUBLES_DATE_MODS" class="java.sql.Timestamp"/>
+	<field name="DOUBLES_CREATED_BY" class="java.lang.String"/>
+	<field name="DOUBLES_XML_DATA" class="java.lang.String"/>
+	<field name="DOUBLES_FINGER_01" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_FINGER_02" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_FINGER_03" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_FINGER_04" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_FINGER_05" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_FINGER_06" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_FINGER_07" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_FINGER_08" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_FINGER_09" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_FINGER_10" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_FINGER_MAIN" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_PHOTO" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_SIGNATURE" class="java.math.BigDecimal"/>
+	<field name="DOUBLES_CITIZ" class="java.math.BigDecimal"/>
+	<background>
+		<band height="555" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="3" width="115" height="44" forecolor="#001440" backcolor="#001440"/>
+				<textElement>
+					<font fontName="Trebuchet MS" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[I.P.R.S]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="37" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="0" width="114" height="20"/>
+				<textElement/>
+				<text><![CDATA[ID. No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="0" width="38" height="20"/>
+				<textElement/>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="0" width="80" height="20"/>
+				<textElement/>
+				<text><![CDATA[Sur Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="0" width="80" height="20"/>
+				<textElement/>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="0" width="80" height="20"/>
+				<textElement/>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="512" y="0" width="80" height="20"/>
+				<textElement/>
+				<text><![CDATA[Year of Birth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="615" y="0" width="36" height="20"/>
+				<textElement/>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="699" y="0" width="53" height="20"/>
+				<textElement/>
+				<text><![CDATA[Day]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="5" y="0" width="111" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{DOUBLES_O_PID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="1" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DOUBLES_SURN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="1" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DOUBLES_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="0" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DOUBLES_LAST_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="1" width="38" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DOUBLES_SEX}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="1" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{DOUBLES_YEAR_B}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="615" y="0" width="36" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{DOUBLES_MONTH_B}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="699" y="2" width="53" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{DOUBLES_DAY_B}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="615" y="34" width="131" height="20"/>
+				<textElement/>
+				<text><![CDATA[Report Generated by IPRS | ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="748" y="34" width="54" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

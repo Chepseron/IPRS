@@ -1,0 +1,48 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bean;
+
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import sun.misc.BASE64Encoder;
+
+/**
+ *
+ * @author Administrator
+ */
+public final class PasswordService {
+
+    private static PasswordService instance;
+
+    public PasswordService() {
+    }
+
+    public synchronized String encrypt(String plainText) throws Exception {
+        MessageDigest md = null;
+        try {
+            md = MessageDigest.getInstance("SHA");
+        } catch (NoSuchAlgorithmException e) {
+            throw new Exception(e.getMessage());
+        }
+
+        try {
+            md.update(plainText.getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            throw new Exception(e.getMessage());
+        }
+        byte raw[] = md.digest();
+
+        String hash = (new BASE64Encoder()).encode(raw);
+        return hash;
+    }
+
+    public static synchronized PasswordService getInstance() {
+        if (instance == null) {
+            instance = new PasswordService();
+        }
+        return instance;
+    }
+}
